@@ -40,7 +40,7 @@ const Header = () => {
     <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="flex justify-between items-center px-4 py-5">
         <div className="text-xl font-bold">
-          <Link to="/">Logo</Link>
+          <Link to="/">Trio Designs Logo</Link>
         </div>
 
         <div className="hidden md:flex gap-x-8">
@@ -73,7 +73,7 @@ const Header = () => {
           ref={menuRef}
           className="md:hidden absolute top-16 left-0 w-full bg-white shadow-lg py-4"
         >
-          <div className="flex flex-col items-center gap-y-4">
+          <div className="flex flex-col items-start gap-y-4 px-4">
             <Link
               to="/"
               className={getLinkClass("/")}

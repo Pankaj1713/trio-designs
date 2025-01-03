@@ -1,14 +1,46 @@
 import React from "react";
+import Slider from "react-slick";
+
+// You may need to import slick styles if not already done globally
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HeroSection = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
+
   return (
-    <div className="w-full flex flex-col-reverse gap-10 items-center justify-center lg:flex-row lg:justify-between mt-[100px] lg:mt-[120px]">
-      <div className="font-bold text-5xl sm:text-6xl z-[1] w-1/2">
-        Let's make waves in the digital world.
-      </div>
-      <div className="sh-image w-[100%] sm:w-[70%] lg:w-[40%] lg:mr-10">
-        <img src="/images/heroImg.webp" alt="Hero Image" />
-      </div>
+    <div className="w-full">
+      <Slider {...settings}>
+        <div>
+          <img
+            src="/images/heroImg1.jpg"
+            alt="Hero Image 1"
+            className="w-full h-[30vh] md:h-[70vh] object-contain md:object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/heroImg1.jpg"
+            alt="Hero Image 2"
+            className="w-full h-[30vh] md:h-[70vh] object-contain md:object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="/images/heroImg1.jpg"
+            alt="Hero Image 3"
+            className="w-full h-[30vh] md:h-[70vh] object-contain md:object-cover"
+          />
+        </div>
+      </Slider>
     </div>
   );
 };
