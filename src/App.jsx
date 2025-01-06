@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Gallery from "./Pages/Gallery";
 
 // Lazy loading for components
 const Layout = React.lazy(() => import("./Components/Layout"));
@@ -19,6 +20,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/our-clients" element={<Clients />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/products" element={<Products />} />
               <Route path="/contact-us" element={<ContactUs />} />
             </Route>

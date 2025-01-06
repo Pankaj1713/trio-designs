@@ -1,39 +1,100 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
+
+const CARDS_DATA = [
+  {
+    image: "/images/cards/cardImg1.png",
+    title: "Baroque Sport Elegance",
+    description:
+      "An extraordinary blend of athletic comfort and opulent style, this sport top adorned with baroque embellishments is paired with a silky white satin skirt. A look that redefines sportswear luxury.",
+  },
+  {
+    image: "/images/cards/cardImg2.png",
+    title: "Bridal Couture",
+    description:
+      "Embrace the edgy sophistication with this glossy black vinyl top, infused with golden reflections. A piece that epitomizes the bold spirit of modern fashion.",
+  },
+  {
+    image: "/images/cards/cardImg3.png",
+    title: "Monochrome Lace Enchantment",
+    description:
+      "A timeless creation of black and white lace, this dress weaves together classic elegance and contemporary design. The embodiment of grace for the fashion-forward woman.",
+  },
+];
 
 const Banner = () => {
+  const navigate = useNavigate();
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <div>
-      <div className="flex items-center gap-y-10 md:gap-x-5 flex-col md:flex-row">
-        <div className="flex flex-col gap-y-5 md:w-[70%]">
-          <h1 className="md:text-5xl text-xl font-bold">
-            Welcome to trio designs
-          </h1>
-          <p className="leading-relaxed">
-            {` Established in 1998, under the leadership of Mr. Anshul Choudhary, a
-          qualified charted accountant, we are pleased to introduce ourselves as
-          one of the reputed garment/home furnishing manufacturers & exporters,
-          based in Noida, India. We have been serving various brands across the
-          globe, backed by five state of the art units with a capacity to
-          produce 10 million garments per annum. Apart from being fully equipped
-          to produce both woven and knitted products, ‘on time’ delivery has
-          been the golden feather in our hat and we aim to continously deliver
-          high quality within the stipulated customer timelines. Following the
-          world ' s best practices such as innovative design , latest fash lon
-          trends , worldwide sourcing and Indepth knowledge of specially the
-          European market has helped us in being our customer's delight . we
-          believe in a proactive approach and work as an extended team for our
-          clients. With years of experience and expertise in handling special
-          fabrics , prints and embelishments we have expanded our portfolio to
-          high quality home furnishings including bed , kitchen , table and bath
-          linens, windows and other decorative accessories , focussingon dynamic
-          seasons and moods. While we strive to deliver and perform we continue
-          to comply to ethical work and compliance standards and give back to
-          the society and environment with various heath and safety initatives.`}
-          </p>
+    <div className="px-5 md:px-28">
+      <div className="flex flex-col gap-y-3">
+        <h1 className="text-[#A28140] text-3xl md:text-5xl font-medium">
+          Showcase Highlights
+        </h1>
+        <div className="md:text-[20px] text-md leading-relaxed">
+          Explore the fusion of modern elegance and innovative design in our
+          'Collection Highlights.' Each piece is a statement, reflecting the
+          unique aesthetic of 'Ada Luxe.' Dive into the collection below.
         </div>
-        <div>
-          <img src="/images/bannerImg.jpg" alt="Banner Image" />
-        </div>
+      </div>
+      <div className="w-full mt-10 md:mt-16">
+        <Slider {...settings} className="gap-5">
+          {CARDS_DATA?.map((data, index) => (
+            <div key={index} className="flex justify-center">
+              <div className="w-full max-w-[330px]">
+                <img
+                  src={data?.image}
+                  alt={data?.title}
+                  className="w-full h-[240px] object-cover"
+                />
+                <div className="mt-4">
+                  <h3 className="text-lg font-semibold text-[#A28140]">
+                    {data?.title}
+                  </h3>
+                  <p className="text-sm">{data?.description}</p>
+                </div>
+              </div>
+              <div className="flex">
+                <button
+                  onClick={() => navigate("/gallery")}
+                  type="button"
+                  className=" text-white bg-[#A28140] px-2 py-1 mt-4"
+                >
+                  Explore the Collection
+                </button>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );

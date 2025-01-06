@@ -14,7 +14,9 @@ const Header = () => {
   };
 
   const getLinkClass = (path) => {
-    return location.pathname === path ? "text-red-500" : "hover:text-red-500";
+    return location.pathname === path
+      ? "text-[#A28140]"
+      : "hover:text-[#A28140]";
   };
 
   useEffect(() => {
@@ -37,7 +39,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div className="fixed top-0 left-0 w-full bg-black text-white shadow-md z-50">
       <div className="flex justify-between items-center px-4 py-5">
         <div className="text-xl font-bold">
           <Link to="/">Trio Designs Logo</Link>
@@ -55,6 +57,9 @@ const Header = () => {
           </Link>
           <Link to="products" className={getLinkClass("/products")}>
             Products
+          </Link>
+          <Link to="gallery" className={getLinkClass("/gallery")}>
+            Gallery
           </Link>
           <Link to="contact-us" className={getLinkClass("/contact-us")}>
             Contact Us
