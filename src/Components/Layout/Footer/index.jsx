@@ -57,7 +57,7 @@ const Footer = () => {
           <p className="text-gray-400 leading-relaxed">
             Trio Clothing Pvt Ltd. <br /> A35 Sector 65, Noida <br />
           </p>
-          {/* <p className="text-gray-400 mt-4">Email: info@trioclothing.com</p> */}
+          <p className="text-gray-400 mt-4">Email: hello@triosdesigns.com</p>
           <p className="text-gray-400">Phone: +91 9810047539</p>
         </div>
       </div>
