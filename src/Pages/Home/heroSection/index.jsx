@@ -7,12 +7,13 @@ const HeroSection = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 5000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
     arrows: false,
+    className: "notes-slider",
   };
 
   return (
