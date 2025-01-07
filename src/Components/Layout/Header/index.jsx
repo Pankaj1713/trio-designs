@@ -39,9 +39,9 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-black text-white shadow-md z-50">
+    <div className="fixed top-0 left-0 w-full bg-black text-black md:text-white shadow-md z-50">
       <div className="flex justify-between items-center px-4 py-5">
-        <div className="text-xl font-bold">
+        <div className="text-xl font-bold text-white">
           <Link to="/">Trio Designs Logo</Link>
         </div>
 
@@ -67,8 +67,8 @@ const Header = () => {
         </div>
 
         <div className="md:hidden flex items-center">
-          <button ref={buttonRef} onClick={toggleMenu} className="text-xl">
-            <IoMenu />
+          <button ref={buttonRef} onClick={toggleMenu} className="text-xl ">
+            <IoMenu className="text-white"/>
           </button>
         </div>
       </div>

@@ -36,6 +36,8 @@ const Banner = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
+    arrows: false,
+    className: "notes-slider",
     responsive: [
       {
         breakpoint: 1024,
@@ -69,8 +71,8 @@ const Banner = () => {
       <div className="w-full mt-10 md:mt-16">
         <Slider {...settings} className="gap-5">
           {CARDS_DATA?.map((data, index) => (
-            <div key={index} className="flex justify-center">
-              <div className="w-full max-w-[330px]">
+            <div key={index} className="flex justify-center w-full md:px-4">
+              <div className="w-full">
                 <img
                   src={data?.image}
                   alt={data?.title}
@@ -83,7 +85,7 @@ const Banner = () => {
                   <p className="text-sm">{data?.description}</p>
                 </div>
               </div>
-              <div className="flex">
+              <div className="flex px-4 justify-end">
                 <button
                   onClick={() => navigate("/gallery")}
                   type="button"

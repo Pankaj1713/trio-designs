@@ -4,7 +4,7 @@ const AboutWebsite = () => {
   return (
     <div className="px-5 md:px-28">
       <div>
-        <div className=" text-3xl md:text-5xl font-medium pb-2 md:pb-6">
+        <div className="text-3xl md:text-5xl font-medium pb-2 md:pb-6">
           About Website
         </div>
         <div className="text-md md:text-[20px] font-semibold">

@@ -2,6 +2,8 @@ import React from "react";
 import HeroSection from "./heroSection";
 import Banner from "./banner";
 import AboutWebsite from "./aboutWebsite";
+import Newsletter from "./newsLetter";
+import Features from "./features";
 
 const Home = () => {
   return (
@@ -9,6 +11,8 @@ const Home = () => {
       <HeroSection />
       <Banner />
       <AboutWebsite />
+      <Features />
+      <Newsletter />
     </div>
   );
 };
