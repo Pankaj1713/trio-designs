@@ -47,7 +47,7 @@ const AboutUs = () => {
       </div>
 
       {/* Our Promise Section */}
-      <div className="mt-16 py-8 px-4 sm:px-8 md:px-16 lg:px-28 rounded-lg shadow-lg">
+      <div className="mt-16 py-8 px-4 sm:px-8 md:px-16 lg:px-28">
         <h2 className="text-2xl md:text-3xl font-bold text-black text-center md:text-start mb-8 md:mb-12">
           Our Promise
         </h2>
