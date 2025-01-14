@@ -42,7 +42,7 @@ const Header = () => {
     <div className="fixed top-0 left-0 w-full bg-black text-black md:text-white shadow-md z-50">
       <div className="flex justify-between items-center px-4 py-5">
         <div className="text-xl font-bold text-white">
-          <Link to="/">Trio Designs Logo</Link>
+          <Link to="/"><img src="/images/logo.svg" alt="" /></Link>
         </div>
 
         <div className="hidden md:flex gap-x-8">
