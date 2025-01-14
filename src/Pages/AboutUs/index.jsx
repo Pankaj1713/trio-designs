@@ -10,8 +10,8 @@ const teamMembers = [
 
 const AboutUs = () => {
   return (
-    <div className=" px-4 pt-20">
-      <div className="bg-[#B39568] px-4 sm:px-8 md:px-16 lg:px-28 py-16">
+    <div className="px-4 pt-20">
+      <div className="bg-[#A28140] px-4 sm:px-8 md:px-16 lg:px-28 py-16">
         {/* About Us Section */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16">
           {/* Text Content */}
@@ -44,57 +44,57 @@ const AboutUs = () => {
             />
           </div>
         </div>
+      </div>
 
-        {/* Our Promise Section */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-black text-start my-12">
-            Our Promise
-          </h2>
-          <div className="bg-[#F5F0E5] mt-16 py-8 px-4 sm:px-8 md:px-16 lg:px-28 rounded-lg shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex items-start">
-                <span className="text-4xl font-bold text-[#A28140] mr-4">
-                  01
-                </span>
-                <div>
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Exceptional Craftsmanship
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Designed to perfection by skilled artisans.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <span className="text-4xl font-bold text-[#A28140] mr-4">
-                  02
-                </span>
-                <div>
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Bespoke Designs
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Tailored to reflect your personality and vision.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <span className="text-4xl font-bold text-[#A28140] mr-4">
-                  03
-                </span>
-                <div>
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Unmatched Quality
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Only the finest materials and techniques.
-                  </p>
-                </div>
-              </div>
+      {/* Our Promise Section */}
+      <div className="mt-16 py-8 px-4 sm:px-8 md:px-16 lg:px-28 rounded-lg shadow-lg">
+        <h2 className="text-2xl md:text-3xl font-bold text-black text-center md:text-start mb-8 md:mb-12">
+          Our Promise
+        </h2>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 bg-white p-6 md:p-14 rounded-lg shadow-lg">
+          <div className="flex items-start">
+            <span className="text-3xl sm:text-4xl font-bold text-[#A28140] mr-4">
+              01
+            </span>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-black mb-2">
+                Exceptional Craftsmanship
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600">
+                Designed to perfection by skilled artisans.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <span className="text-3xl sm:text-4xl font-bold text-[#A28140] mr-4">
+              02
+            </span>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-black mb-2">
+                Bespoke Designs
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600">
+                Tailored to reflect your personality and vision.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <span className="text-3xl sm:text-4xl font-bold text-[#A28140] mr-4">
+              03
+            </span>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-black mb-2">
+                Unmatched Quality
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600">
+                Only the finest materials and techniques.
+              </p>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Our Team Section */}
       <div className="bg-[#F5F0E5] px-4 sm:px-8 md:px-16 lg:px-28 py-16">
         <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-12">
           Our Team
@@ -118,6 +118,7 @@ const AboutUs = () => {
           ))}
         </div>
       </div>
+
       <CollectionSection />
     </div>
   );
