@@ -42,7 +42,13 @@ const Header = () => {
     <div className="fixed top-0 left-0 w-full bg-black text-black md:text-white shadow-md z-50">
       <div className="flex justify-between items-center px-4 py-5">
         <div className="text-xl font-bold text-white">
-          <Link to="/"><img src="/images/logo.svg" alt="" /></Link>
+          <Link to="/">
+            <img
+              src="/images/logo.svg"
+              alt="Logo"
+              className="w-24 h-12 md:w-40 md:h-16"
+            />
+          </Link>
         </div>
 
         <div className="hidden md:flex gap-x-8">
@@ -68,7 +74,7 @@ const Header = () => {
 
         <div className="md:hidden flex items-center">
           <button ref={buttonRef} onClick={toggleMenu} className="text-xl ">
-            <IoMenu className="text-white"/>
+            <IoMenu className="text-white" />
           </button>
         </div>
       </div>

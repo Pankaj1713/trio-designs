@@ -4,7 +4,7 @@ import Features from "../Home/features";
 
 const Clients = () => {
   return (
-    <div className="flex flex-col gap-y-10 md:gap-y-20 px-4 py-20">
+    <div className="flex flex-col gap-y-10 md:gap-y-20 px-4 py-20 mt-10">
       <Features />
       <OurCustomers />
     </div>
