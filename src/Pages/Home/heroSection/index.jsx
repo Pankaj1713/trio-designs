@@ -17,7 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full px-4 pt-[82px] md:pt-[120px]">
       <Slider {...settings}>
         <div>
           <img

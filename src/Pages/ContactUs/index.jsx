@@ -28,13 +28,14 @@ const ContactUs = () => {
       window.open(whatsappURL, "_blank");
     },
   });
+
   return (
-    <div className="min-h-screen flex items-center justify-center ">
-      <div className="flex items-center gap-8 max-w-4xl">
+    <div className="min-h-screen flex items-center justify-center px-4 pt-24 mt-4 md:mt-8">
+      <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
         {/* Form Section */}
         <form
           onSubmit={formik.handleSubmit}
-          className="p-8 bg-white rounded-lg shadow-lg border border-gray-200 space-y-6"
+          className="p-8 bg-white rounded-lg shadow-lg border border-gray-200 space-y-6 w-full md:w-1/2"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -141,16 +142,16 @@ const ContactUs = () => {
 
           <button
             type="submit"
-            className="text-white bg-[#A28140] hover:bg-[#8F6E35] px-4 py-2 sm:px-6 sm:py-3 transition-all duration-300"
+            className="text-white bg-[#A28140] hover:bg-[#8F6E35] px-4 py-2 sm:px-6 sm:py-3 transition-all duration-300 w-full"
           >
             Send Message
           </button>
         </form>
 
         {/* Contact Info Section */}
-        <div className="p-8 ">
+        <div className="p-8 w-full md:w-1/2">
           <h2 className="text-2xl font-bold text-gray-800">Reach us at</h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 mb-6">
             Feel free to contact us with your queries or suggestions.
           </p>
           <div className="space-y-4">

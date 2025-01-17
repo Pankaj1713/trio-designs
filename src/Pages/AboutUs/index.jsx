@@ -10,7 +10,7 @@ const teamMembers = [
 
 const AboutUs = () => {
   return (
-    <div className="px-4 pt-20 mt-4 md:mt-8">
+    <div className="px-4 pt-24 mt-4 md:mt-8">
       <div className="bg-[#A28140] px-4 sm:px-8 md:px-16 lg:px-28 py-16">
         {/* About Us Section */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16">
